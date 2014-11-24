@@ -7588,8 +7588,9 @@ nav.main-menu {
     -webkit-transition: color, background 0.3s ease-out;
     -moz-transition: color, background 0.3s ease-out;
     transition: color, background 0.3s ease-out; }
-  nav.main-menu .navbar-collapse {
-    border-top: 4px #5d1818 solid; }
+  @media screen and (max-width: 991px) {
+    nav.main-menu .navbar-collapse {
+      border-top: 4px #5d1818 solid; } }
 
 ul.nav li.dropdown:hover > ul.dropdown-menu {
   display: block; }
@@ -7654,12 +7655,12 @@ footer.site-footer {
       width: 98%; } }
   .home .event.ready {
     opacity: inherit; }
+  .home .event .event-excerpt {
+    border-bottom: 1px solid rgba(110, 49, 17, 0.3);
+    padding-bottom: 0.5em; }
 .event h3 {
   font-size: 1.5em;
   margin-bottom: 0; }
-.event .event-excerpt {
-  border-bottom: 1px solid rgba(110, 49, 17, 0.3);
-  padding-bottom: 0.5em; }
 .event .event-location {
   font-weight: 700;
   font-family: "Comfortaa", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -7680,5 +7681,13 @@ footer.site-footer {
     border-bottom-right-radius: 1em;
     border-top-left-radius: 1em;
     font-family: "Comfortaa", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.single-event .event {
+  font-size: 1.15em; }
+.single-event .event-date {
+  top: 0;
+  left: 0;
+  bottom: initial;
+  right: initial; }
 
 /*# sourceMappingURL=style.css.map */

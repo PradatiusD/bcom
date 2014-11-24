@@ -62,7 +62,7 @@ add_action( 'wp_enqueue_scripts', 'footer_scripts');
 
 // Homepage Scripts
 function homepage_scripts () {
-    if (is_front_page()) {
+  if (is_front_page()) {
     wp_enqueue_script('imagesLoaded','//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js', array('masonry','jquery'),'3.0.4',true);
     wp_enqueue_script('homepageJS', get_stylesheet_directory_uri().'/js/home.js',array('masonry','jquery','imagesLoaded'), '1.0.0', true);
   }

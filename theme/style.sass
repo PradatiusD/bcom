@@ -100,7 +100,8 @@ nav.main-menu
 		+transition(color, background 0.3s ease-out)
 
 	.navbar-collapse
-		border-top: 4px $bcomDarkRed solid
+		+max-screen($screen-sm-max)
+			border-top: 4px $bcomDarkRed solid
 
 // For Menu on Hover
 ul.nav li.dropdown:hover > ul.dropdown-menu
@@ -177,13 +178,15 @@ footer.site-footer
 		&.ready
 			opacity: inherit
 
+		.event-excerpt
+			border-bottom: 1px solid rgba($bcomBrown, 0.3)
+			padding-bottom: 0.5em
+
+
 	h3
 		font-size: 1.5em
 		margin-bottom: 0
 
-	.event-excerpt
-		border-bottom: 1px solid rgba($bcomBrown, 0.3)
-		padding-bottom: 0.5em
 	.event-location
 		font-weight: 700
 		font-family: $headings-font-family
@@ -208,3 +211,12 @@ footer.site-footer
 		border-bottom-right-radius: 1em
 		border-top-left-radius: 1em
 		font-family: $headings-font-family
+
+.single-event
+	.event
+		font-size: 1.15em
+	.event-date
+		top: 0
+		left: 0
+		bottom: initial
+		right: initial

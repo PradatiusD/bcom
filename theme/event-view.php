@@ -19,10 +19,17 @@
     </a>
   </h3>
 
+
   <small class="event-location">
     @ <?php echo types_render_field('event-location-title', array()); ?>
+
+    <?php
+    if (is_singular('event')) {
+      echo "( ".types_render_field('address', array())." )";
+    }
+    ?> 
   </small>
-  
+
   <figure class="event-image-holder">
     <a href="<?php the_permalink(); ?>">
       <?php the_post_thumbnail('large', array("class"=>"img-responsive"));?>
