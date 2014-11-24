@@ -68,6 +68,7 @@ $brand-primary: $bcomRed
 @import "../bower_components/bootstrap-sass/lib/bootstrap"
 @import "../bower_components/sass-mediaqueries/media-queries"
 @import "../bower_components/bourbon/dist/bourbon"
+@import "../bower_components/animate.scss/scss/animate"
 
 a
 	+transition(color 0.3s ease-out)
@@ -82,7 +83,7 @@ a
 	height: 100px
 	width: $logoWidth
 	margin-left: -$logoWidth/2 !important
-
+	z-index: 9999
 	text-indent: -9999px
 
 	background: url('img/brown-bear-logo.png')
@@ -94,9 +95,12 @@ a
 nav.main-menu
 	background-color: $bcomRed
 	background-position: center
-	border: none
+	border-bottom-width: 7px
 	a
 		+transition(color, background 0.3s ease-out)
+
+	.navbar-collapse
+		border-top: 4px $bcomDarkRed solid
 
 // For Menu on Hover
 ul.nav li.dropdown:hover > ul.dropdown-menu
@@ -152,28 +156,31 @@ footer.site-footer
 
 .event
 
-	width: 24.2%
-	display: inline-block
-	vertical-align: top
-	padding-left: 10px
-	padding-right: 10px
-	+min-screen(1400px)
-		width: 19.4%
-	+max-screen($screen-md-max)
+	.home &
 		width: 24.2%
-	+max-screen($screen-sm-max)
-		width: 32%
-	+max-screen($screen-xs-max)
-		width: 48%
-	+max-screen($screen-xs - 1)
-		width: 98%
+		display: inline-block
+		vertical-align: top
+		padding-left: 10px
+		padding-right: 10px
+		+min-screen(1400px)
+			width: 19.4%
+		+max-screen($screen-md-max)
+			width: 24.2%
+		+max-screen($screen-sm-max)
+			width: 32%
+		+max-screen($screen-xs-max)
+			width: 48%
+		+max-screen($screen-xs - 1)
+			width: 98%
+
+		opacity: 0
+		&.ready
+			opacity: inherit
 
 	h3
 		font-size: 1.5em
 		margin-bottom: 0
 
-	.event-date
-		font-weight: bold
 	.event-excerpt
 		border-bottom: 1px solid rgba($bcomBrown, 0.3)
 		padding-bottom: 0.5em
@@ -181,5 +188,23 @@ footer.site-footer
 		font-weight: 700
 		font-family: $headings-font-family
 
+
+
+.event-image-holder
+	position: relative
+
 	img
 		border-radius: 1em
+
+	.event-date
+		position: absolute
+		bottom: 0
+		right: 0
+		background: rgba($bcomRed,0.9)
+		color: $bcomLightRed
+		padding: 0.5em
+		letter-spacing: 0.5px
+		padding: 1em 0.5em 0.5em 1em
+		border-bottom-right-radius: 1em
+		border-top-left-radius: 1em
+		font-family: $headings-font-family

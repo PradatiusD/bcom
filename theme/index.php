@@ -7,39 +7,20 @@
 
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-            <h1>
-              <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute();?>">
-                <?php the_title(); ?>
-              </a>
-            </h1>
-
             <?php
-              // If blog home
-              if (is_post_type_archive()): ?>
-                <article class="row">
+              if (is_post_type_archive()) {
+              
+                get_template_part('archive-view');
+              
+              } else if (is_singular('event')) {
 
-                  <?php if (has_post_thumbnail()): ?>
+                get_template_part('event-view');
 
-                    <div class="col-md-3">
-                      <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                        <?php the_post_thumbnail('thumbnail', array('class'=>'img-responsive')); ?>
-                      </a>
-                    </div>
-                    <div class="col-md-9">
-                  <?php else:?>
-                    <div class="col-md-12">
-                  <?php endif; ?>
-                      <?php the_excerpt(); ?>
-                    </div>
-                </article>
-              <?php
-              else:
-                if (get_post_type() == 'team-member') {
-                  get_template_part('team-member');
-                } else {
-                  the_content('Read more...');
-                }
-              endif;
+              } else {
+
+                get_template_part('main-view');
+
+              };
             ?>
 
         <?php endwhile;?>

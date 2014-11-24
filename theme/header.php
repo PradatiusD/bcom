@@ -26,7 +26,7 @@
                   <?php bloginfo('name'); ?>
               </a>
             </div>
-            <section class="collapse navbar-collapse" id="navigationbar">
+            <section class="collapse navbar-collapse" id="main-nav-collapse">
               <?php
 
                 wp_nav_menu( array(
