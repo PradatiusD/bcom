@@ -67,5 +67,6 @@ function homepage_scripts () {
     wp_enqueue_script('homepageJS', get_stylesheet_directory_uri().'/js/home.js',array('masonry','jquery','imagesLoaded'), '1.0.0', true);
   }
 }
-
 add_action('wp_enqueue_scripts','homepage_scripts');
+
+include('facebook.php');

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<types>
+    <settings>
+        <add_resized_images_to_library>0</add_resized_images_to_library>
+        <register_translations_on_import>1</register_translations_on_import>
+        <images_remote>0</images_remote>
+        <images_remote_cache_time>36</images_remote_cache_time>
+        <help_box>by_types</help_box>
+    </settings>
+    <groups>
+        <group>
+            <ID>14</ID>
+            <post_content></post_content>
+            <post_title>Events Custom Fields</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_fields>,event-location-title,address,event-start-date,flyer,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,event,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+                <_wp_types_group_admin_styles></_wp_types_group_admin_styles>
+                <_wp_types_group_templates>all</_wp_types_group_templates>
+                <_wpcf_conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </_wpcf_conditional_display>
+            </meta>
+            <hash>d0f2bb79cd832b567c207810981d8355</hash>
+            <checksum>d0f2bb79cd832b567c207810981d8355</checksum>
+            <__types_id>events-custom-fields</__types_id>
+            <__types_title>Events Custom Fields</__types_title>
+        </group>
+    </groups>
+    <fields>
+        <field>
+            <id>address</id>
+            <slug>address</slug>
+            <type>textfield</type>
+            <name>Fully formatted address</name>
+            <description>The most accurate fully formatted address (Example: 9298 S.W. 57th Ave, Pinecrest, Florida 33156)</description>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-address</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>address</__types_id>
+            <__types_title>Fully formatted address</__types_title>
+            <hash>5c70c26d75d9b0df337c269e374d9928</hash>
+            <checksum>5c70c26d75d9b0df337c269e374d9928</checksum>
+        </field>
+        <field>
+            <id>event-start-date</id>
+            <slug>event-start-date</slug>
+            <type>date</type>
+            <name>Event Start Date</name>
+            <description>Date &amp; Time event begins.</description>
+            <data>
+                <date_and_time>and_time</date_and_time>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-event-start-date</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>event-start-date</__types_id>
+            <__types_title>Event Start Date</__types_title>
+            <hash>18f55847a3fa69109b83737fec2c0592</hash>
+            <checksum>18f55847a3fa69109b83737fec2c0592</checksum>
+        </field>
+        <field>
+            <id>flyer</id>
+            <slug>flyer</slug>
+            <type>file</type>
+            <name>Flyer</name>
+            <description>Add a file that is a flyer about the event.</description>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-flyer</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>flyer</__types_id>
+            <__types_title>Flyer</__types_title>
+            <hash>5a2e792b58478cdca56f621c8ad0cc7f</hash>
+            <checksum>5a2e792b58478cdca56f621c8ad0cc7f</checksum>
+        </field>
+        <field>
+            <id>event-location-title</id>
+            <slug>event-location-title</slug>
+            <type>textfield</type>
+            <name>Event Location Title</name>
+            <description>Name the location of the venue.  (Example: O Cinema)</description>
+            <data>
+                <repetitive>0</repetitive>
+                <conditional_display>
+                    <custom_use>0</custom_use>
+                    <relation>AND</relation>
+                    <custom></custom>
+                </conditional_display>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-event-location-title</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>event-location-title</__types_id>
+            <__types_title>Event Location Title</__types_title>
+            <hash>677ca36a8de9782056e422f0cba3e25f</hash>
+            <checksum>677ca36a8de9782056e422f0cba3e25f</checksum>
+        </field>
+    </fields>
+    <types>
+        <type>
+            <wpcf-post-type>event</wpcf-post-type>
+            <labels>
+                <name>Events</name>
+                <singular_name>Event</singular_name>
+                <add_new>Add New</add_new>
+                <add_new_item>Add New %s</add_new_item>
+                <edit_item>Edit %s</edit_item>
+                <new_item>New %s</new_item>
+                <view_item>View %s</view_item>
+                <search_items>Search %s</search_items>
+                <not_found>No %s found</not_found>
+                <not_found_in_trash>No %s found in Trash</not_found_in_trash>
+                <parent_item_colon>Parent text</parent_item_colon>
+                <all_items>All items</all_items>
+            </labels>
+            <slug>event</slug>
+            <description>Event custom post type.</description>
+            <icon>calendar</icon>
+            <public>public</public>
+            <menu_position></menu_position>
+            <menu_icon></menu_icon>
+            <supports>
+                <title>1</title>
+                <editor>1</editor>
+                <excerpt>1</excerpt>
+                <thumbnail>1</thumbnail>
+            </supports>
+            <rewrite>
+                <enabled>1</enabled>
+                <custom>normal</custom>
+                <slug></slug>
+                <with_front>1</with_front>
+                <feeds>1</feeds>
+                <pages>1</pages>
+            </rewrite>
+            <has_archive>1</has_archive>
+            <show_in_menu>1</show_in_menu>
+            <show_in_menu_page></show_in_menu_page>
+            <show_ui>1</show_ui>
+            <publicly_queryable>1</publicly_queryable>
+            <can_export>1</can_export>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <id>event</id>
+            <__types_id>event</__types_id>
+            <__types_title>Events</__types_title>
+            <hash>74bf84181cc9ec9c87c912714886f72d</hash>
+            <checksum>74bf84181cc9ec9c87c912714886f72d</checksum>
+        </type>
+    </types>
+</types>

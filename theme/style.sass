@@ -69,6 +69,7 @@ $brand-primary: $bcomRed
 @import "../bower_components/sass-mediaqueries/media-queries"
 @import "../bower_components/bourbon/dist/bourbon"
 @import "../bower_components/animate.scss/scss/animate"
+@import "../bower_components/8406309/gravity form style fixing"
 
 a
 	+transition(color 0.3s ease-out)
@@ -220,3 +221,25 @@ footer.site-footer
 		left: 0
 		bottom: initial
 		right: initial
+
+
+// For GForm
+.gform_body
+
+	.ginput_full
+		@extend .row
+
+	.ginput_left, .ginput_right
+		@extend .col-md-6
+
+	.ginput_left
+		padding-left: 0
+
+	.ginput_right
+		padding-right: 0
+
+	.medium
+		@extend .col-md-12
+
+.gform_button
+	@extend .btn-lg
