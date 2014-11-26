@@ -156,6 +156,9 @@ footer.site-footer
 	padding-left: 10px
 	padding-right: 10px
 
+.home-insta
+	@extend .event-feed
+
 .event
 
 	.home &
@@ -222,6 +225,24 @@ footer.site-footer
 		bottom: initial
 		right: initial
 
+// For Instafeed
+#instafeed
+	@extend .row
+
+	.instaItem
+		padding-left: 5px
+		padding-right: 5px
+
+	figure.thumbnail
+		margin-bottom: 5px
+
+	.img-responsive
+		width: 100%
+
+	figcaption
+		background: #FFF
+		padding: 0.5em
+		font-size: 0.7em
 
 // For GForm
 .gform_body
@@ -241,5 +262,9 @@ footer.site-footer
 	.medium
 		@extend .col-md-12
 
+	.gform_validation_container
+		display: none
+
 .gform_button
 	@extend .btn-lg
+

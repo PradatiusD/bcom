@@ -33,7 +33,10 @@
       echo "No posts found";
     }
     ?>
-  </div>  
+  </div>
+</section>
+<section class="container-fluid home-insta">
+  <?php do_action('after_loop');?>
 </section>
 
 <?php get_footer();?>

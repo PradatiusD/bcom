@@ -37,6 +37,8 @@
         <?php endif; ?>
         <!-- End WordPress Loop -->
 
+        <?php do_action('after_loop');?>
+
       </main>
 
       <aside class="col-md-3">
