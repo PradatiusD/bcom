@@ -2697,7 +2697,7 @@ input[type="button"].btn-block {
   margin: 2px 0 0;
   list-style: none;
   font-size: 17px;
-  background-color: rgba(182, 92, 129, 0.7);
+  background-color: white;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0;
@@ -2718,19 +2718,19 @@ input[type="button"].btn-block {
     clear: both;
     font-weight: normal;
     line-height: 1.42857;
-    color: white;
+    color: #340e0e;
     white-space: nowrap; }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
   text-decoration: none;
-  color: #ddb4c5;
-  background-color: #883d5c; }
+  color: #6e3111;
+  background-color: #d9d9d9; }
 
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
-  color: #ddb4c5;
+  color: #6e3111;
   text-decoration: none;
   outline: 0;
-  background-color: #883d5c; }
+  background-color: #d9d9d9; }
 
 .dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
   color: #999999; }
@@ -3032,7 +3032,9 @@ input[type="button"].btn-block {
   background-color: #eeeeee;
   border: 1px solid #ccc;
   border-radius: 0; }
-  .input-group-addon.input-sm,
+  .input-group-addon.input-sm, .ginput_container .input-group-sm > input.input-group-addon,
+  .ginput_container .input-group-sm > select.input-group-addon,
+  .ginput_container .input-group-sm > textarea.input-group-addon,
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn,
   .input-group-sm > .input-group-btn > .input-group-addon.gform_button,
@@ -3040,7 +3042,9 @@ input[type="button"].btn-block {
     padding: 5px 10px;
     font-size: 15px;
     border-radius: 0; }
-  .input-group-addon.input-lg,
+  .input-group-addon.input-lg, .ginput_container .input-group-lg > input.input-group-addon,
+  .ginput_container .input-group-lg > select.input-group-addon,
+  .ginput_container .input-group-lg > textarea.input-group-addon,
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn,
   .input-group-lg > .input-group-btn > .input-group-addon.gform_button,
