@@ -1773,6 +1773,11 @@ pre code {
   opacity: 1;
 }
 
+.form-control::-ms-input-placeholder {
+  color: #868e96;
+  opacity: 1;
+}
+
 .form-control::placeholder {
   color: #868e96;
   opacity: 1;
@@ -11530,6 +11535,9 @@ h3,
 
 .client-list a img {
   opacity: 0.8;
+  max-width: 100%;
+  display: block;
+  padding: 1em;
 }
 
 .client-list a:hover img {

@@ -38,7 +38,8 @@ gulp.task('sass', function () {
   .pipe(autoprefixer('last 2 versions'))
   .pipe(sourcemaps.init())
   .pipe(sourcemaps.write('maps'))
-  .pipe(gulp.dest('css'));
+  .pipe(gulp.dest('css'))
+  .pipe(reload({stream:true}));
 });
 
 
@@ -56,7 +57,7 @@ gulp.task('imagemin', () =>
 
 
 //////////////////////////////
-// Css task
+// CSS task
 /////////////////////////////
 gulp.task('css', function(){
   gulp.src('css/**/*.css')
@@ -66,7 +67,7 @@ gulp.task('css', function(){
 
 
 //////////////////////////////
-// HTml task
+// HTML task
 /////////////////////////////
 gulp.task('html', function(){
   gulp.src('**/*.html')
