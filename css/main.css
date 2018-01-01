@@ -9223,6 +9223,10 @@ h3,
   line-height: 66px;
 }
 
+#header .logo img {
+  max-width: 250px;
+}
+
 #header .logo .gray {
   display: none;
 }

@@ -21,6 +21,11 @@
         padding: 0;
         transition: all .2s linear;
         line-height: $header-sticky-height;
+
+        img {
+            max-width:250px;
+        }
+
         .gray{
             display: none;
         }

@@ -13,22 +13,13 @@
       <change beforePath="$PROJECT_DIR$/css/maps/video-banner.css.map" afterPath="$PROJECT_DIR$/css/maps/video-banner.css.map" />
       <change beforePath="$PROJECT_DIR$/css/slideshow-banner.css" afterPath="$PROJECT_DIR$/css/slideshow-banner.css" />
       <change beforePath="$PROJECT_DIR$/css/video-banner.css" afterPath="$PROJECT_DIR$/css/video-banner.css" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
       <change beforePath="$PROJECT_DIR$/images/logo-gray.png" afterPath="$PROJECT_DIR$/images/logo-gray.png" />
       <change beforePath="$PROJECT_DIR$/images/logo.png" afterPath="$PROJECT_DIR$/images/logo.png" />
       <change beforePath="$PROJECT_DIR$/img/logo-gray.png" afterPath="$PROJECT_DIR$/img/logo-gray.png" />
       <change beforePath="$PROJECT_DIR$/img/logo.png" afterPath="$PROJECT_DIR$/img/logo.png" />
-      <change beforePath="$PROJECT_DIR$/img/logos/3docean-logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/logos/codecanyon-logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/logos/envato-logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/logos/graphicriver-logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/logos/photodune-logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/logos/themeforest-logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/logos/videohive-logo.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/scss/components/_clients.scss" afterPath="$PROJECT_DIR$/scss/components/_clients.scss" />
-      <change beforePath="$PROJECT_DIR$/scss/seetings/_main.scss" afterPath="$PROJECT_DIR$/scss/seetings/_main.scss" />
-      <change beforePath="$PROJECT_DIR$/scss/seetings/_slideshow-banner.scss" afterPath="$PROJECT_DIR$/scss/seetings/_slideshow-banner.scss" />
+      <change beforePath="$PROJECT_DIR$/php/contact_me.php" afterPath="$PROJECT_DIR$/php/contact_me.php" />
+      <change beforePath="$PROJECT_DIR$/scss/layout/_header.scss" afterPath="$PROJECT_DIR$/scss/layout/_header.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,19 +36,69 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="646" column="128" lean-forward="false" selection-start-line="646" selection-start-column="128" selection-end-line="646" selection-end-column="128" />
+            <state relative-caret-position="296">
+              <caret line="502" column="111" lean-forward="false" selection-start-line="502" selection-start-column="111" selection-end-line="502" selection-end-column="111" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#section#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#section#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#section#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#section#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#aside#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#8;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#section#8;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#39101#39107#0" expanded="true" />
+                <element signature="e#38344#38350#0" expanded="true" />
+                <marker date="1514847954827" expanded="true" signature="18222:18311" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact_me.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/contact_me.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_banner.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/components/_banner.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="slideshow-banner.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/slideshow-banner.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-316">
+              <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_header.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/layout/_header.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,16 +108,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="211">
               <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -96,36 +127,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_owl-carousel.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/components/_owl-carousel.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="slideshow-banner.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/slideshow-banner.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-70">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_main.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/seetings/_main.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_slideshow-banner.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/seetings/_slideshow-banner.scss">
           <provider selected="true" editor-type-id="text-editor">
@@ -141,16 +142,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -182,6 +173,10 @@
       <find>please</find>
       <find>background</find>
       <find>opacity</find>
+      <find>interview</find>
+      <find>gray</find>
+      <find>#blog</find>
+      <find>fantastic</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -198,6 +193,8 @@
         <option value="$PROJECT_DIR$/scss/seetings/_slideshow-banner.scss" />
         <option value="$PROJECT_DIR$/js/custom.js" />
         <option value="$PROJECT_DIR$/scss/components/_clients.scss" />
+        <option value="$PROJECT_DIR$/scss/layout/_header.scss" />
+        <option value="$PROJECT_DIR$/php/contact_me.php" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -325,6 +322,12 @@
               <item name="bcom" type="b2602c69:ProjectViewProjectNode" />
               <item name="bcom" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bcom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bcom" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
               <item name="modifiers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -373,12 +376,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1514831718034</updated>
-      <workItem from="1514831719275" duration="10075000" />
+      <workItem from="1514831719275" duration="12718000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10075000" />
+    <option name="totallyTimeSpent" value="12718000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="779" extended-state="6" />
@@ -515,14 +518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/slideshow-banner.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-70">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/seetings/_main.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -591,20 +586,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scss/components/_banner.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/slideshow-banner.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-316">
+          <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/layout/_header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/contact_me.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="646" column="128" lean-forward="false" selection-start-line="646" selection-start-column="128" selection-end-line="646" selection-end-column="128" />
+        <state relative-caret-position="296">
+          <caret line="502" column="111" lean-forward="false" selection-start-line="502" selection-start-column="111" selection-end-line="502" selection-end-column="111" />
           <folding>
             <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#section#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#section#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#section#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#section#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#aside#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#8;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#section#8;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#39101#39107#0" expanded="true" />
+            <element signature="e#38344#38350#0" expanded="true" />
+            <marker date="1514847954827" expanded="true" signature="18222:18311" ph="..." />
           </folding>
         </state>
       </provider>
