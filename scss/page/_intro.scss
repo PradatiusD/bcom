@@ -1,0 +1,125 @@
+#header.intro {
+    .btn.btn-md{
+        font-size:0.9375rem;
+        font-weight: 600;
+        font-family: $headings-font-family;
+    }
+    
+}
+
+.page-title.intro{
+    padding: 0;
+    h1{
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+
+    @include media-breakpoint-up(lg) {
+        h1{
+            font-size: 4rem;
+        }
+
+        .lead{
+            font-size: 1.5rem;
+        } 
+    }
+}
+
+
+/*Demo List Style*/
+
+.demo-list {
+    padding: 0;
+    margin-top: -25px;
+    margin-bottom: -25px;
+    overflow: hidden;
+    >li {
+        list-style: none;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .item-wrap {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        transition: all .3s ease-out;
+        box-shadow: 0 0 6px 0 rgba(darken($body-bg, 50%), .1);
+        img{
+            backface-visibility: initial;
+        }
+        
+        &:hover {
+            transform: translateY(-10px);
+            border-color: transparent;
+        }
+    }
+    h4 {
+        font-size: $font-size-base;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 20px 0 0;
+    }
+}
+
+//banner-highlight
+#footer.intro {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    h3{
+        font-weight: normal;
+        color: rgba($white, 0.9);
+        margin-bottom: 30px;
+
+        @include media-breakpoint-up(md){
+            font-size: 2rem;
+        }
+
+    }
+}
+
+
+//features
+.features{
+    margin: $grid-gutter-width/ -2;
+    padding:0;
+    overflow: hidden;
+
+    >li{
+        list-style: none;
+        padding: 15px;
+        float: left;
+        width: 100%;
+
+        @include media-breakpoint-up(xs) {
+        width: calc(100% / 2);
+        }
+
+        @include media-breakpoint-up(md) {
+        width: calc(100% / 3);
+        }
+
+        @include media-breakpoint-up(lg) {
+        width: calc(100% / 4);
+        }
+
+
+        
+    }
+    .icon-wrap{
+        position: relative;
+        padding-left: 38px;
+        display: block;
+        font-size: 0.9375rem;
+        margin: 0;
+        font-family: $font-family-base;
+        font-weight: normal;
+        line-height: $line-height-base;
+
+        i{
+            font-size: $font-size-base*1.5;
+            position: absolute;
+            left: 0;
+        }
+    }
+}

@@ -1,0 +1,118 @@
+/* Contact  block style */
+
+.contact {
+    color: rgba($white, 0.94);
+    h3{
+        color: rgba($white, 0.94);
+        line-height: 1.4;
+        margin-bottom: 30px;
+    }
+
+    #contactUs {
+        .form-group {
+            margin-bottom: 25px;
+            .form-control{
+                border-radius: 1px;
+                background-color: transparent;
+                border: 0;
+                border-bottom: 2px solid rgba($white, 0.84);
+                color: $white;
+                box-shadow: none;
+                padding-left: 0;
+                @include placeholder(rgba($white, 84));
+                
+                &:focus{
+                    border-color: $white;
+                }
+            }
+            input.form-control {
+                height: 40px;
+            }
+        }
+    }
+
+    .help-block {
+        margin: 0;
+        padding-top: 5px;
+        ul {
+            padding-left: 15px;
+            margin: 0;
+        }
+    }
+
+    .btn-wrap{
+        .btn {
+            margin-top: 20px;
+            outline: none;
+        }
+        text-align: center;
+        @include media-breakpoint-up(md) {
+            text-align: right;
+        }
+        #success{
+            text-align: left;
+        }
+    }
+
+    @include media-breakpoint-down(sm){
+        #contactUs{
+            padding-top: 30px;
+        }
+    }
+}
+
+//contact details
+.contact-details {
+    padding-left: 10px;
+    overflow: hidden;
+    margin: 0;
+    li {
+        list-style: none;
+        &+li{
+            margin-top: 1.75rem;
+        }
+        h4{
+            text-transform: uppercase;
+            font-size: $font-size-base*1.125;
+            color: $white;
+            font-weight: 500;
+            margin: 0 0 0.3rem;
+        }
+        .inner-wrap{
+            position: relative;
+            min-height: 35px;
+            padding-left: 45px;
+            line-height: 1.5;
+        }
+        i {
+            display:inline-block;
+            font-size: $font-size-base*2.25;
+            color: $white;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        @include media-breakpoint-down(md) {
+            margin-bottom: 40px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    a {
+        color: darken($white, 10%);
+    }
+}
+
+//map-link
+.map-link{
+    display: inline-block;
+    color: $white;
+    font-size: 1.15rem;
+    margin-top: 1.5rem;
+    &:hover{
+        color: rgba($white, 0.84);
+        text-decoraton: none;
+    }
+}
+

@@ -1,0 +1,249 @@
+.blog-detail {
+    line-height: 1.7;
+    
+    //blog-banner
+    .blog-banner {
+
+    }
+
+
+    //article
+    article {
+        h3 {
+            margin: 0 0 10px;
+            font-size: $font-size-base*1.25;
+            font-weight: 500;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+            >li {
+                list-style: none;
+                position: relative;
+                padding-left: 25px;
+                margin-bottom: 2px;
+                &:before {
+                    display: inline-block;
+                    content: "\f058";
+                    font-family: FontAwesome;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    margin-right: 10px;
+                    position: absolute;
+                    left: 0;
+                    color: $brand-primary;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+
+        //blockquote design
+        blockquote {
+            background-color: transparent;
+            font-weight: 500;
+            font-style: italic;
+            font-size: $font-size-base;
+            padding: 0 0 0 20px;
+            border-left: 3px solid $brand-primary;
+            margin: 0 0 20px 20px;
+            display: block;
+            color: darken($body-color, 20%);
+        }
+
+    }
+
+
+    //blog info
+    .info {
+        font-size: $font-size-base*0.9375;
+        @extend %clearfix;
+        margin-bottom: 30px;
+        ul {
+            padding: 0;
+            margin: 0;
+            >li {
+                display: inline-block;
+                list-style: none;
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+                &:before {
+                    display: inline-block;
+                    margin-right: 5px;
+                    font-family: 'FontAwesome';
+                    color: $brand-primary;
+                }
+                &.date:before {
+                    content: "\f133";
+                }
+                &.auther:before {
+                    content: "\f007";
+                }
+                &.views:before {
+                    content: "\f06e";
+                }
+                &.comment:before {
+                    content: "\f0e5";
+                }
+                b {
+                    font-size: $font-size-base;
+                }
+            }
+            @include media-breakpoint-up(md) {
+                float: left;
+            }
+        }
+    }
+
+    //share
+    .share {
+        h4 {
+            margin: 0;
+            display: inline-block;
+            font-size: $font-size-base;
+            padding-right: 4px;
+        }
+        a {
+            display: inline-block;
+            margin-left: 1px;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 2px;
+            border: 1px solid darken($body-bg, 7%);
+            color: darken($body-color, 5%);
+            &:hover,
+            &:focus {
+                border-color: $brand-primary;
+                background-color: $brand-primary;
+                color: $white;
+            }
+        }
+    }
+
+
+
+
+    //comments
+    .comments-module {
+        font-size: $font-size-base*0.9375;
+        line-height: 1.7;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            >li {
+                list-style: none;
+                margin-top: 35px;
+            }
+            .child {
+                padding-left: 30px;
+            }
+        }
+
+         >ul {
+            padding: 30px 15px;
+            box-shadow: 0 0 6px 0 rgba(darken($body-bg, 50%), .1);
+            background-color: $white;
+        }
+
+        .item-wrap{
+            display: block;
+            overflow: hidden;
+        }
+
+        >ul>li {
+            &:not(:first-child) {
+                border-top: 1px solid darken($body-bg, 8%);
+                padding-top: 35px;
+            }
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        .intro-img,
+        .intro-text {
+            float: left;
+        }
+
+        .intro-img {
+            width: 50px;
+            img {
+                max-width: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        .intro-text {
+            width: calc(100% - 50px);
+            padding-left: 20px;
+            padding-right: 0;
+
+            .item-title{
+                margin-bottom: 1rem;
+                display: block;
+                h4,
+                .date{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                h4 {
+                    margin: 0;
+                    font-size: $font-size-base;
+                    text-transform: capitalize;
+                }
+                .date {
+                    margin-left: 10px;
+                }
+            }
+
+            .reply{
+                font-size: 0.8375rem;
+                font-weight: 500;
+                text-decoration: none;
+                transition:  0.2s all linear;
+                i{
+                    font-size: 0.75rem;
+                }
+            }
+           
+        }
+
+         @include media-breakpoint-up(sm){
+            >ul{
+                padding: 30px;
+            }
+        }
+    }
+
+
+    //reply form
+    .reply-form {
+        .form-control {
+            border-color: darken($body-bg, 5%);
+            border-radius: 1px;
+            &:focus {
+                box-shadow: none;
+                border-color: $brand-primary;
+            }
+        }
+        button.btn-primary {
+            border-radius: 2px;
+        }
+        .help-block.text-danger {
+            color: theme-color('danger');
+            font-size: $font-size-base*0.8125;
+            ul {
+                padding-left: 17px;
+            }
+        }
+    }
+
+
+}

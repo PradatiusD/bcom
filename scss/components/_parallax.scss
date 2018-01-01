@@ -1,0 +1,59 @@
+/* Parallax styles */
+
+.parallax {
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 0;
+    z-index: 1;
+    position: relative;
+    .color-overlay {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        overflow: hidden;
+        background: $black;
+        z-index: -1;
+        opacity: 0.74;
+        &.light{
+            opacity: 0.55;
+        }
+
+        &.lighten{
+            opacity: 0.2;
+        }
+    }
+
+    &.primary-bg {
+        .color-overlay {
+            background-color: $brand-primary;
+            opacity: 0.84;
+        }
+    }
+
+
+    &.gradient {
+        .color-overlay {
+            background-image: linear-gradient(to left, $brand-secondary 0%, $brand-primary 100%);
+            opacity: 0.94;
+        }
+    }
+
+    .section-title {
+        h2,
+        .sub-title {
+            color: $white;
+        }
+    }
+
+
+    @include media-breakpoint-down(md) {
+        background-attachment: scroll;
+        background-position: 50% 50% !important;
+    }
+}

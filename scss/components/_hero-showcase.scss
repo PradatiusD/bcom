@@ -1,0 +1,38 @@
+/* hero-showcase  style */
+.hero-showcase{
+	position: relative;
+	&.bg-dark{
+		background-color: $gray-900 !important;
+	}
+	.image-half{
+		background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: center;
+	}
+
+	@include media-breakpoint-up(lg) {
+		.image-half{
+			position: absolute;
+			top:0;
+			bottom: 0;
+			width: 50%;
+
+			&.left{
+				left: 0;
+			}
+
+			&.right{
+				right: 0;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		.image-half{
+			height: 300px;
+			width: 100%;
+		}
+
+	}
+	
+}

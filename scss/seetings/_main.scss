@@ -1,0 +1,212 @@
+
+//import google fonts
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,500,600,700,800,900|Roboto:300,300i,400,500');
+
+// ==================================================================
+// SCSS CUSTOM VERIABLES 
+// ==================================================================
+
+// global spacing 
+$spacer: 1rem !default;
+
+$global-top-space: 		100px;
+$global-bottom-space:	100px;
+$global-space: 			  90px;
+$global-md-space: 		60px;
+$global-sm-space: 		45px;
+$global-xs-space: 		30px;
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:   1.25rem !default;
+$font-size-sm:   .875rem !default;
+
+$font-weight-normal:  normal !default;
+$font-weight-bold:    bold !default;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+
+// create font variable
+$roboto:				      'Roboto',sans-serif;
+$poppins:             'Poppins',sans-serif;
+$font-family-base: 		$roboto; // global font family
+
+$navigation-font-family:		  $roboto;
+$navigation-font-size:	 		  0.875rem;
+$navigation-letter-spacing:	  0.08rem;
+$navigation-font-weight:		  500;
+$navbar-margin-bottom: 			  0 !default;
+$navbar-border-radius: 			  0 !default;
+$navbar-collapse-max-height:  none !default;
+
+//header default
+$header-height:				     90px;
+$header-sticky-height:		 66px;
+$header-sm-height:			   $header-sticky-height;
+$header-icon-font-size:		 1.125rem;
+
+//By default, this inherits from the `<body>`.
+$h1-font-size: 1.75rem !default;
+$h2-font-size: 1.5rem !default;
+$h3-font-size: 1.375rem !default;
+$h4-font-size: 1.25rem !default;
+$h5-font-size: 1.125rem !default;
+$h6-font-size: 1rem !default;
+
+$headings-margin-bottom: ($spacer / 2) !default;
+$headings-font-family:   $poppins !default;
+$headings-font-weight:   600 !default;
+$headings-line-height:   1.1 !default;
+
+$border-width: 1px !default;
+
+$border-radius:          .25rem !default;
+$border-radius-lg:       .3rem !default;
+$border-radius-sm:       .2rem !default;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:              $border-radius !default;
+$btn-border-radius-lg:           $border-radius-lg !default;
+$btn-border-radius-sm:           $border-radius-sm !default;
+
+
+// ==================================================================
+// COLOR OPTIONS (SKINS)
+// ==================================================================
+
+//== global color ===
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: (
+  100: $gray-100,
+  200: $gray-200,
+  300: $gray-300,
+  400: $gray-400,
+  500: $gray-500,
+  600: $gray-600,
+  700: $gray-700,
+  800: $gray-800,
+  900: $gray-900
+) !default;
+
+$blue:    #12be1f !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$colors: (
+  blue:      $blue,
+  indigo:    $indigo,
+  purple:    $purple,
+  pink:      $pink,
+  red:       $red,
+  orange:    $orange,
+  yellow:    $yellow,
+  green:     $green,
+  teal:      $teal,
+  cyan:      $cyan,
+  white:     $white,
+  gray:      $gray-600,
+  gray-dark: $gray-800
+) !default;
+
+$theme-colors: (
+  primary:    $blue,
+  secondary:  $gray-600,
+  success:    $green,
+  info:       $cyan,
+  warning:    $yellow,
+  danger:     $red,
+  light:      $gray-100,
+  dark:       $gray-800
+) !default;
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval: 8% !default;
+
+$brand-primary:   theme-color("primary") !default;
+$brand-secondary: theme-color("secondary") !default;
+$brand-info :     theme-color("info") !default;
+
+$body-bg:                #f8fcfd !default;
+$body-color:             $gray-700 !default;
+$link-color:             theme-color("primary") !default;
+$headings-color:         $gray-800 !default;
+$component-active-color: $white !default;
+$component-active-bg:    theme-color("primary") !default;
+
+// Navs
+$nav-link-padding-y:            .5rem !default;
+$nav-link-padding-x:            1rem !default;
+
+// Navbar
+$navbar-padding-y:                  ($spacer / 2) !default;
+$navbar-padding-x:                  $spacer !default;
+
+$navbar-toggler-padding-y:           .25rem !default;
+$navbar-toggler-padding-x:           .75rem !default;
+$navbar-toggler-font-size:           $font-size-lg !default;
+$navbar-toggler-border-radius:       $btn-border-radius !default;
+
+$navbar-dark-color:                 rgba($white,.94) !default;
+$navbar-dark-hover-color:           rgba($white,1) !default;
+$navbar-dark-active-color:          $navbar-dark-hover-color !default;
+$navbar-dark-disabled-color:        rgba($white,.25) !default;
+$navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+$navbar-dark-toggler-border-color:  rgba($white,.1) !default;
+
+$navbar-light-color:                rgba($black,.84) !default;
+$navbar-light-hover-color:          $brand-primary !default;
+$navbar-light-active-color:         $navbar-light-hover-color !default;
+$navbar-light-disabled-color:       rgba($black,.3) !default;
+$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+$navbar-light-toggler-border-color: rgba($black,.1) !default;
+
+// Dropdown menu
+$dropdown-min-width:             10rem !default;
+$dropdown-padding-y:             .5rem !default;
+$dropdown-spacer:                .125rem !default;
+$dropdown-bg:                    $white !default;
+$dropdown-border-color:          rgba($black,.15) !default;
+$dropdown-border-width:          $border-width !default;
+$dropdown-divider-bg:            $gray-200 !default;
+$dropdown-box-shadow:            0 .5rem 1rem rgba($black,.175) !default;
+
+$dropdown-link-color:            $gray-900 !default;
+$dropdown-link-hover-color:      darken($gray-900, 5%) !default;
+$dropdown-link-hover-bg:         $gray-100 !default;
+
+$dropdown-link-active-color:     $component-active-color !default;
+$dropdown-link-active-bg:        $component-active-bg !default;
+
+$dropdown-link-disabled-color:   $gray-600 !default;
+
+$dropdown-item-padding-y:        .25rem !default;
+$dropdown-item-padding-x:        1.5rem !default;
+
+$dropdown-header-color:          $gray-600 !default;
+
+
+//footer
+$footer-bg: $gray-900;
+
+//slide menu
+$side-menu-bg: 		 $white;
+$side-menu-color:	 $gray-900;

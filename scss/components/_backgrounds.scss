@@ -1,0 +1,13 @@
+/* background color for content blocks */
+
+.bg-white {
+    background-color: $white;
+}
+
+.bg-light-gray {
+    background-color: darken($body-bg, 4%);
+}
+
+.bg-gray {
+    background-color: darken($body-bg, 8%);
+}

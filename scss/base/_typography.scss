@@ -1,0 +1,45 @@
+
+ /* typography */
+ 
+ h1,
+ h2,
+ h3,
+ .h3,
+ h4 {
+     margin: 0 0 1.25rem;
+     color: $headings-color;
+     @include media-breakpoint-up(sm) {
+         margin: 0 0 0.9375rem;
+     }
+ }
+ 
+ h1 {
+     font-size: 1.5rem;
+     @include media-breakpoint-up(sm){
+         font-size: 1.75rem;
+     }
+     @include media-breakpoint-up(md) {
+         font-size: 1.875rem;
+     }
+ }
+ 
+ h2 {
+     font-size: 1.5rem;
+     @include media-breakpoint-up(sm){
+         font-size: 1.625rem;
+     }
+     @include media-breakpoint-up(md){
+         font-size: 1.875rem;
+     }
+ }
+ 
+ h3,
+ .h3 {
+     font-size: 1.125rem;
+     @include media-breakpoint-up(sm) {
+         font-size: 1.25rem;
+     }
+     @include media-breakpoint-up(md) {
+         font-size: 1.5rem;
+     }
+ }

@@ -1,0 +1,327 @@
+/* general style for html and body */
+::selection{
+    background-color: $brand-primary;
+    color: $white;
+}
+html,
+body {
+    height: 100%;
+}
+
+body {
+    min-width: 320px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: none;
+}
+
+video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+
+/* reset default form styles */
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="submit"],
+input[type="reset"],
+button,
+textarea,
+input[type="email"] {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+iframe {
+    vertical-align: top;
+}
+
+strong,
+b{
+    font-weight: bold;
+}
+
+p:last-child{
+    margin-bottom: 0;
+}
+
+#wrap {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    display: table;
+    position: relative;
+    table-layout: fixed;
+}
+
+.form-control {
+    box-shadow: none;
+    outline: none;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.default-list {
+    @extend %listreset;
+    li {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 10px 10px;
+    }
+}
+
+
+/* background stretch styles */
+.bg-stretch {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+    img {
+        max-width: none;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/* Common-box style */
+.common-box {
+    padding-top: $global-md-space;
+    padding-bottom: $global-md-space;
+    overflow: hidden;
+    @include media-breakpoint-up(sm) {
+        padding-top: $global-space;
+        padding-bottom: $global-space;
+    }
+     @include media-breakpoint-up(md) {
+        padding-top: $global-top-space;
+        padding-bottom: $global-bottom-space;
+    }
+
+    &.padding-top-0{
+        padding-top: 0;
+    }
+
+    &.padding-bottom-0{
+        padding-bottom: 0;
+    }
+}
+
+
+/* section Title */
+.section-title {
+    display: block;
+    position: relative;
+    padding-bottom: $global-md-space;
+    h2 {
+        line-height: 1;
+        margin: 0;
+        letter-spacing: 0.08rem;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .sub-title{
+        display: block;
+        max-width: 700px;
+        margin: auto;
+        line-height: 1.6;
+        padding-top: 0.75rem;
+        font-weight: 500;
+        color: rgba($black, 0.5);
+    }
+
+    @include media-breakpoint-up(md) {
+        h2{
+            font-size: 2.5rem;
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        h2{
+            font-size: 2.75rem;
+            font-weight: 800;
+        }
+        .sub-title{
+            font-size: $font-size-base*1.125;
+        }
+    }
+    
+}
+
+
+/* section Title */
+.page-title {
+    display: block;
+    position: relative;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    margin-top: $header-height;
+    background: url(../images/page-title-bg.png) repeat top left ;
+    h1 {
+        line-height: 1;
+        margin: 0;
+        letter-spacing: 0.08rem;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    &.bg-dark{
+        color: $white;
+        h1{
+            color: $white;
+        }
+    }
+
+    .breadcrumb{
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        font-size: 0;
+        padding-top: 15px;
+        >li{
+            float: none;
+            display: inline-block;
+            font-size: $font-size-base;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        h1{
+            font-size: 2.5rem;
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        h1{
+            font-size: 2.75rem;
+            font-weight: 800;
+        }
+    }
+    @include media-breakpoint-down(md) {
+        margin-top: $header-sticky-height;
+    }
+}
+
+
+/* full width image style */
+.fill {
+    width: 100%;
+}
+
+
+/* text block style */
+.text-block {
+    padding-bottom: $global-md-space;
+    @include media-breakpoint-up(sm) {
+        padding-bottom: $global-space;
+    }
+     @include media-breakpoint-up(md) {
+        padding-bottom: $global-bottom-space;
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* text block style */
+.block {
+    margin-bottom: $global-md-space;
+}
+
+
+/* Common module style */
+.common-module {
+    margin-bottom: $global-xs-space;
+     @include media-breakpoint-up(sm) {
+        margin-bottom: $global-sm-space;
+    }
+    .module-title {
+        position: relative;
+        font-weight: bold;
+        @include media-breakpoint-up(md){
+            font-size: 1.35rem;
+        }
+    }
+}
+
+
+/* vertically center style */
+.align-middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+}
+
+
+/* Video Play Button style */
+.btn-videoplay{
+    display: inline-block;
+    width: 62px;
+    height: 62px;
+    line-height: 62px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    opacity: 1;
+    transition: opacity .3s ease;
+    animation: scale 2s linear infinite;
+    border: 2px solid transparent;
+    outline: none;
+
+    i{
+        display: inline-block;
+        position: relative;
+        left: 2px;
+        top: 2px;
+    }
+
+    &.color-gray{
+        border-color: $gray-900;
+        color: $gray-900;
+    }
+
+    &.color-light{
+        border-color: $white;
+        color: $white;
+    }
+
+    &.color-primary{
+        border-color: $brand-primary;
+        background-color:$brand-primary;
+        color: $white;
+    }
+
+
+    &:hover{
+        opacity: 0.84;
+    }
+}
+@keyframes scale {
+    0%,
+    100% {
+        transform: scale3d(1, 1, 1)
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1.1)
+    }
+}
+
+
+/* Small Devices, Tablets */
+ @include media-breakpoint-down(sm) {
+    .animated {
+        transition-property: none !important;
+        transform: none !important;
+        animation: none !important;
+    }
+}

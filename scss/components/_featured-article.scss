@@ -1,0 +1,79 @@
+/* About  block style */
+
+.featured-article {
+    position: relative;
+    z-index: 1;
+    color: $gray-dark;
+    font-size: $font-size-base*0.9375;
+    
+    .intro {
+        position: relative;
+    }
+    .intro:before {
+        display: inline-block;
+        content: '';
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.30em;
+    }
+    .intro-text {
+        display: inline-block;
+        @media only screen and (min-width: $screen-lg) {
+            max-width: 570px;
+        }
+        .btn {
+            margin-top: 15px;
+            font-size: $font-size-base*0.75;
+            font-weight: 700;
+        }
+    }
+}
+
+@include breakpoint-min($screen-md-min) {
+    .featured-article  {
+        .height {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .intro-text {
+            vertical-align: middle;
+        }
+
+        .row{
+            &:nth-child(odd){
+                .intro-text {
+                    padding-left: 50px;
+                    padding-right: 15px;
+                }
+            }
+            &:nth-child(even){
+                .intro-img{
+                    float: right;
+                }
+                .intro {
+                    text-align: right;
+                    .intro-text{
+                        padding-right: 50px;
+                        padding-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint-max($screen-sm-max) {
+    .featured-article  {
+        text-align: center;
+        .height .bg-stretch {
+            position: static;
+        }
+        .intro-text {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &.common-box {
+            padding: 0;
+        }
+    }
+}

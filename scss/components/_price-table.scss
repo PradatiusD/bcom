@@ -1,0 +1,87 @@
+/* Price table style */
+
+.price-table {
+    color: darken($body-color, 25%);
+    .package-wrap {
+        padding: 0;
+        >li {
+            list-style: none;
+        }
+    }
+    .item-wrap {
+        padding: 30px;
+        background-color: $white;
+        position: relative;
+        text-align: left;
+        box-shadow: 0 0 6px 0 rgba(darken($body-bg, 50%), .1);
+        .title-wrap {
+            padding: 0;
+            //color: rgba($black, 0.8);
+            text-transform: capitalize;
+            h3 {
+                margin: 0;
+            }
+        }
+        .cost {
+            display: block;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            b {
+                font-weight: 600;
+                font-size: $font-size-base*2;
+                color: $brand-primary;
+            }
+        }
+        >ul {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            font-size: 0.8125rem;
+            >li {
+                list-style: none;
+                padding-left:  20px;
+                position: relative;
+                &:not(:first-child){
+                    margin-top: 15px;
+                }
+
+                &:before{
+                    position: absolute;
+                    left: 0;
+                    top: 5px;
+                    font-family: 'FontAwesome';
+                    content: "\f00c";
+                    opacity: 0.74;
+                }
+
+
+               
+                strong {
+                    font-size: 1rem;
+                    display: block;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .btn {
+        text-transform: none;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    .item-wrap.active {
+        box-shadow: 0 0 12px 0 rgba(darken($body-bg, 80%), .1);
+        z-index: 1;
+        .title-wrap {
+        }
+    }
+    @include media-breakpoint-down(xs) {
+        .col-sm-4 {
+            margin-bottom: 40px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

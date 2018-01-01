@@ -1,0 +1,80 @@
+/* header styles */
+
+//header
+#header {
+    transition: all .2s linear;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+
+    &.lighter-bg{
+        background-color: rgba($white, 0.1);
+        }
+
+    &.shadow{
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.34);
+    }
+
+
+    .logo{
+        padding: 0;
+        transition: all .2s linear;
+        line-height: $header-sticky-height;
+        .gray{
+            display: none;
+        }
+    }
+
+    &.bg-light{
+        .logo{
+            .normal{
+                display: none;
+            }
+
+            .gray{
+                display: inline-block;
+            }
+        }
+    }
+    
+
+    .btn.btn-md{
+        padding: 0.6rem 1.25rem;
+        margin-left: 10px;
+        font-size: 0.75rem;
+    }
+    
+    /* header styles  on desktop*/
+    @include media-breakpoint-up(lg) {
+        position: fixed;
+        #main-menu.navbar .nav-link,
+        .logo {
+            line-height: $header_height;
+        }
+
+        /*sticky Header style*/
+        &.fixed-position {
+            border: none;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); //height: $header-sticky-height;
+
+            #main-menu.navbar .nav-link,
+            .logo {
+                line-height: $header-sticky-height;
+            }
+        }
+    }
+
+
+    /* header styles  on tablet & mobile*/
+    @include media-breakpoint-down(md) {
+        position: absolute;
+
+        .container-fluid{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    
+}
