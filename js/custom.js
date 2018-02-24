@@ -318,7 +318,7 @@ jQuery(function($) {
      //Call to client item slide
     var owl = $(".client-list");
     owl.owlCarousel({
-        items: 5,
+        items: 4,
         itemsDesktop: [1199, 4],
         itemsDesktopSmall: [979, 3],
         itemsTablet: [768, 2],
