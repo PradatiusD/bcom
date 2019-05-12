@@ -12,7 +12,9 @@ var gulp          =  require('gulp'),
     sourcemaps    =  require('gulp-sourcemaps'),
     imagemin      =  require('gulp-imagemin'),
     del           =  require('del'),
-    autoprefixer  =  require('gulp-autoprefixer');
+    autoprefixer  =  require('gulp-autoprefixer'),
+    php2html      =  require("gulp-php2html")
+;
 
 
 //////////////////////////////
@@ -70,8 +72,11 @@ gulp.task('css', function(){
 // HTML task
 /////////////////////////////
 gulp.task('html', function(){
-  gulp.src('**/*.html')
-  .pipe(reload({stream:true}));
+  console.log("yay")
+  gulp.src("*.php")
+    .pipe(php2html())
+    .pipe(gulp.dest("."))
+    .pipe(reload({stream:true}));
 });
 
 
@@ -93,8 +98,9 @@ gulp.task('browser-sync', function(){
 gulp.task('watch', function(){
   //gulp.watch('js/**/*.js', ['scripts']);
   gulp.watch('scss/**/*.scss', ['sass']);
-  gulp.watch('**/*.html', ['html']);
+  gulp.watch('*.php', ['html']);
 });
+
 
 //////////////////////////////
 // Default task

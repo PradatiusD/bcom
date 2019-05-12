@@ -320,10 +320,10 @@ jQuery(function($) {
     owl.owlCarousel({
         items: 4,
         itemsDesktop: [1199, 4],
-        itemsDesktopSmall: [979, 3],
-        itemsTablet: [768, 2],
+        itemsDesktopSmall: [979, 4],
+        itemsTablet: [768, 4],
         itemsTabletSmall: true,
-        itemsMobile: [479, 1],
+        itemsMobile: [479, 4],
         navigation: false,
         pagination: false,
         autoPlay: true
@@ -332,12 +332,12 @@ jQuery(function($) {
     //Call to team item slide
     var owl = $(".team-list");
     owl.owlCarousel({
-        items: 3,
-        itemsDesktop: [1199, 3],
-        itemsDesktopSmall: [979, 3],
-        itemsTablet: [768, 2],
+        items: 5,
+        itemsDesktop: [1199, 5],
+        itemsDesktopSmall: [979, 4],
+        itemsTablet: [768, 3],
         itemsTabletSmall: true,
-        itemsMobile: [479, 1],
+        itemsMobile: [479, 3],
         navigation: false,
         pagination: true,
         navigationText: ["<i class='glyphicon glyphicon-menu-left'></i>", "<i class='glyphicon glyphicon-menu-right'></i>"],
