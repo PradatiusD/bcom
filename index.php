@@ -193,14 +193,14 @@ include_once 'data.php'
             </div>
 
             <!-- Sorting Navigation -->
-            <nav class="sorting-nav">
-            <ul>
-            <li class="active" data-filter="all">All Items</li>
-            <li data-filter="1">Application</li>
-            <li data-filter="2">Graphics</li>
-            <li data-filter="3">Media</li>
-            </ul>
-            </nav>
+<!--            <nav class="sorting-nav">-->
+<!--            <ul>-->
+<!--            <li class="active" data-filter="all">All Items</li>-->
+<!--            <li data-filter="1">Application</li>-->
+<!--            <li data-filter="2">Graphics</li>-->
+<!--            <li data-filter="3">Media</li>-->
+<!--            </ul>-->
+<!--            </nav>-->
 
         </div>
 
