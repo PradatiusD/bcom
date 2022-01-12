@@ -1,12 +1,14 @@
+<?php
+include_once 'data.php'
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Brown Club of Miami</title>
-    <!-- favion -->
+    <!-- favicon -->
     <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -524,147 +526,36 @@
             </div>
 
             <?php
-
-            $social_profiles = array('linkedin','instagram','facebook','twitter');
-
-            $team_members = array(
-                array(
-                    'name' => 'Jonathan Kim',
-                    'class_year' => '88',
-                    'title' => 'Co-President',
-                    'image' => 'images/team/jonathan.jpg',
-                    'linkedin' => 'https://www.linkedin.com/in/jonathankim/'
-                ),
-                array(
-                    'name' => 'Kimberly Arredondo',
-                    'class_year' => '11',
-                    'title' => 'Secretary',
-                    'image' => 'images/team/kimberly.jpg',
-                    'linkedin' => 'https://www.linkedin.com/in/kimberly-arredondo-ba614651/',
-                    'instagram' => 'https://www.instagram.com/hellokimmo11/'
-                ),
-                array(
-                    'name' => 'Daniel Prada',
-                    'class_year' => '12',
-                    'title' => 'Co-President',
-                    'image' => 'images/team/daniel.jpg',
-                    'linkedin' => 'https://www.linkedin.com/in/danielprada/',
-                    'instagram' => 'https://www.instagram.com/PradatiusD/',
-                    'twitter' => 'https://twitter.com/PradatiusD',
-                    'facebook' => 'https://www.facebook.com/PradatiusD'
-                ),
-                array(
-                    'name' => 'Irv Lustig',
-                    'class_year' => '83',
-                    'title' => 'Treasurer',
-                    'image' => 'images/team/irv.jpg',
-                    'linkedin' => 'https://www.linkedin.com/in/irv-lustig-6045123/'
-                ),
-                array(
-                    'name' => 'Evan Oster',
-                    'class_year' => '82',
-                    'title' => 'Membership Chair & Alumni Interviewing Program Liaison',
-                    'image' => 'images/team/evan.jpg',
-                    'linkedin' => 'https://www.linkedin.com/in/evanoster/'
-                ),
-            );
-
-            $wow_delay = 0;
-
+                $members = TeamMember::getBoardMembers();
             ?>
 
             <div class="row">
                 <div class="team-list">
-
                     <?php
-                        foreach ($team_members as $team_member):
+
+                    $executive_members = array_filter($members, function ($member) {
+                        return $member->isExecutiveOfficer;
+                    });
+                    $wow_delay = 0;
+                    foreach ($executive_members as $team_member):
                             $wow_delay += 0.3;
+                            $team_member->renderBoardMemberHTML($wow_delay);
                             ?>
-                        <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="<?php echo $wow_delay;?>s">
-                            <div class="item-wrap">
-                                <div class="item"><img src="<?php echo $team_member['image']?>" class="fill" alt="<?php echo $team_member['name'] . ' ' . $team_member['title'];?>">
-                                    <div class="caption">
-                                        <div class="social-link">
-                                            <?php foreach ($social_profiles as $social_profile):?>
-                                                <?php if (array_key_exists($social_profile, $team_member)):;?>
-                                                    <a href="<?php echo $team_member[$social_profile]?>" rel="nofollow" target="_blank"><i class="fa fa-<?php echo $social_profile;?>"></i></a>
-                                                <?php endif;?>
-                                            <?php endforeach;?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4><?php echo $team_member['name'] . ' \'' . $team_member['class_year'];?></h4>
-                            <span class="designation"><?php echo $team_member['title'];?></span>
-                        </div>
                     <?php endforeach;?>
                 </div>
             </div>
 
-            <?php
-
-            $team_members = array(
-                array(
-                    'name' => 'Matthew Ricci',
-                    'class_year' => '90',
-                    'title' => 'Brown Book Award Chair',
-                    'image' => 'images/team/matthew.jpg',
-                    'linkedin' => 'https://www.linkedin.com/in/matthewricci/',
-                ),
-                array(
-                    'name' => 'Samantha Phillips',
-                    'class_year' => '90',
-                    'title' => 'Community Service Chair',
-                    'image' => 'images/team/sam.jpg',
-                ),
-                array(
-                    'name' => 'Peter Lees',
-                    'class_year' => '91',
-                    'title' => 'Communications Chair',
-                    'image' => 'images/team/peter.jpg',
-                    'linkedin' => 'https://www.linkedin.com/in/peter-a-lees-924792/'
-                ),
-                array(
-                    'name' => 'Rosalie Berg',
-                    'class_year' => '93',
-                    'title' => 'Social Co-chair',
-                    'image' => 'images/team/rosalie.jpg',
-                    'linkedin' => 'https://www.linkedin.com/in/rosalieberg'
-                ),
-                array(
-                    'name' => 'Cody Simmons',
-                    'class_year' => '10',
-                    'title' => 'Social Co-chair',
-                    'image' => 'images/team/cody.jpg',
-                    'linkedin' => 'https://www.linkedin.com/in/codyvsimmons'
-                ),
-            );
-            ?>
-
             <div class="row" style="margin-top: 4em">
                 <div class="team-list">
-
                     <?php
-                        foreach ($team_members as $team_member):
+                    $committee_members = array_filter($members, function ($member) {
+                        return !$member->isExecutiveOfficer;
+                    });
+                    $wow_delay = 3;
+                        foreach ($committee_members as $team_member):
                             $wow_delay += 0.3;
+                            $team_member->renderBoardMemberHTML($wow_delay);
                             ?>
-                        <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="<?php echo $wow_delay;?>s">
-                            <div class="item-wrap">
-                                <div class="item"><img src="<?php echo $team_member['image']?>" class="fill" alt="<?php echo $team_member['name'] . ' ' . $team_member['title'];?>">
-                                    <div class="caption">
-                                        <div class="social-link">
-                                            <?php foreach ($social_profiles as $social_profile):?>
-                                                <?php if (array_key_exists($social_profile, $team_member)):;?>
-                                                    <a href="<?php echo $team_member[$social_profile]?>" rel="nofollow" target="_blank"><i class="fa fa-<?php echo $social_profile;?>"></i></a>
-                                                <?php endif;?>
-                                            <?php endforeach;?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4><?php echo $team_member['name'] . ' \'' . $team_member['class_year'];?></h4>
-                            <span class="designation"><?php echo $team_member['title'];?></span>
-                        </div>
                     <?php endforeach;?>
                 </div>
             </div>
@@ -803,7 +694,7 @@
 <!-- Combine plugins  -->
 <script src="js/plugins.js"></script>
 <!-- custom script  -->
-<script src="js/custom.js"></script>
+<script src="js/custom.js?v=1"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69253768-1"></script>

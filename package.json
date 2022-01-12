@@ -1,5 +1,5 @@
 {
-  "name": "BrownClubofMiami",
+  "name": "brown-club-of-miami",
   "version": "1.0.0",
   "description": "Static website",
   "main": "gulpfile.js",
@@ -11,15 +11,24 @@
     "gulp-imagemin": "^3.3.0",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sourcemap": "^1.0.1",
     "gulp-sass": "^3.1.0",
+    "gulp-sourcemap": "^1.0.1",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.0"
   },
   "devDependencies": {
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
     "gulp-php2html": "^0.3.3"
   },
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   },
   "author": "danielprada2012@gmail.com",
   "license": "ISC"
