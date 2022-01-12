@@ -214,3 +214,177 @@ class TeamMember {
         });
     }
 }
+
+class CounterItem {
+    public $value;
+    public $label;
+    public $iconClass;
+    public $isActive;
+    public function __construct($options)
+    {
+        $this->value = $options['value'];
+        $this->label = $options['label'];
+        $this->iconClass = $options['iconClass'];
+        $this->isActive = $options['isActive'];
+    }
+
+    public static function getCounters () {
+        $counters = array(
+            new CounterItem(array(
+                'label' => 'Facebook Friends',
+                'value' => 233,
+                'iconClass' => 'fa fa-facebook',
+                'isActive' => true
+            )),
+            new CounterItem(
+                array(
+                    'label' => 'In Mailing List',
+                    'value' => 459,
+                    'iconClass'  => 'fa fa-envelope-o',
+                    'isActive' => true
+                )),
+            new CounterItem(
+                array(
+                    'label' => 'Instagram Followers',
+                    'value' => 186,
+                    'iconClass' => 'fa fa-instagram',
+                    'isActive' => true
+                )
+            ),
+            new CounterItem(array(
+                'label' => 'Smiles Created',
+                'iconClass' => 'ti-face-smile',
+                'value' => 14493,
+                'isActive' => false
+            )),
+            new CounterItem(array(
+                'label' => 'Events',
+                'iconClass' => 'fa fa-calendar',
+                'value' => 26,
+                'isActive' => true
+            ))
+        );
+        return array_filter($counters, function ($counterItem) {
+            return $counterItem->isActive;
+        });
+    }
+}
+
+class ClubEvent
+{
+    public $title;
+    public $subtitle;
+    public $titleAbbrev;
+    public $largeImage;
+    public $smallImage;
+
+    public function __construct($options)
+    {
+        $this->title = $options['title'];
+        $this->subtitle = $options['subtitle'];
+        $this->titleAbbrev = $options['titleAbbrev'];
+        $this->largeImage = $options['largeImage'];
+        $this->smallImage = $options['smallImage'];
+    }
+
+    public static function getClubEvents()
+    {
+        return array(
+            new ClubEvent(array(
+                'title' => 'All Ivy+ Ugly Sweater Party 2021',
+                'titleAbbrev' => '2021 Ugly Sweater Party',
+                'subtitle' => 'It\'s been so long!',
+                'largeImage' => 'images/events/large/ugly-sweater-2021.jpg',
+                'smallImage' => 'images/events/large/ugly-sweater-2021.jpg',
+            )),
+            new ClubEvent(array(
+                'title' => 'Brunonians Get 🌶️: Miami Spice with Us!',
+                'titleAbbrev' => 'Miami Spice Dinner',
+                'subtitle' => '@ Il Mulino, Gustave, & Zucca',
+                'date' => '09/18/2021',
+                'largeImage' => 'images/events/large/miami-spice.jpg',
+                'smallImage' => 'images/events/large/miami-spice.jpg',
+            )),
+            new ClubEvent(array(
+                'title' => '“Science and Anti Science in America (and Florida!) Today” with Prof. Kenneth Miller',
+                'titleAbbrev' => 'Ken Miller Talk',
+                'subtitle' => 'Discussing Anti-Science Thinking',
+                'date' => '11/30/2018',
+                'largeImage' => 'images/events/large/ken-miller.jpg',
+                'smallImage' => 'images/events/large/ken-miller.jpg',
+            )),
+            new ClubEvent(array(
+                'title' => 'Escape Room Night at Fox in a Box',
+                'titleAbbrev' => 'Escape Room',
+                'subtitle' => 'We survived!',
+                'date' => '09/28/2018',
+                'largeImage' => 'images/events/large/escape-room.jpg',
+                'smallImage' => 'images/events/large/escape-room.jpg',
+            )),
+            new ClubEvent(array(
+                'title' => 'Welcome Reception to the Class of 2020',
+                'titleAbbrev' => 'Class of 2020 Party',
+                'subtitle' => 'Hosted by Laurie Stein',
+                'largeImage' => 'images/events/large/2020-students-reception.jpg',
+                'smallImage' => 'images/events/small/2020-students-reception.jpg',
+            )),
+            new ClubEvent(array(
+                'title' => 'Breaking Through Careers at Miami Country Day School',
+                'titleAbbrev' => 'Career Day',
+                'subtitle' => 'Introducing careers to kids',
+                'largeImage' => 'images/events/large/breaking-careers.jpg',
+                'smallImage' => 'images/events/small/breaking-careers.jpg',
+            )),
+            new ClubEvent(array(
+                'title' => 'Salsa Night with BULAC at the Yuca Cuban Restaurant',
+                'titleAbbrev' => 'Salsa Workshop',
+                'subtitle' => 'With the help of BULAC',
+                'largeImage' => 'images/events/large/salsa-bulac.jpg',
+                'smallImage' => 'images/events/small/salsa-bulac.jpg',
+            )),
+            new ClubEvent(array(
+                'title' => 'All Ivy+ Happy Hour at the Wynwood Yard',
+                'titleAbbrev' => 'Happy Hour',
+                'subtitle' => 'At the lovely Wynwood Yard',
+                'largeImage' => 'images/events/large/wynwood-yard.jpg',
+                'smallImage' => 'images/events/small/wynwood-yard.jpg',
+            )),
+
+            new ClubEvent(array(
+                'title' => 'African Dance Class at the Little Haiti Cultural Center',
+                'titleAbbrev' => 'African Dance Class',
+                'subtitle' => 'Little Haiti Cultural Center',
+                'largeImage' => 'images/events/large/haiti-culture-dance.jpg',
+                'smallImage' => 'images/events/small/haiti-culture-dance.jpg',
+            )),
+            new ClubEvent(array(
+                'title' => 'Ugly Sweater Party',
+                'titleAbbrev' => 'Ugly Sweater Party',
+                'subtitle' => 'Our popular All Ivy+ Event',
+                'largeImage' => 'images/events/large/ugly-sweater.jpg',
+                'smallImage' => 'images/events/small/ugly-sweater.jpg',
+            )),
+            new ClubEvent(array(
+                'title' => 'Danny Glass showcases his artwork at Art Basel',
+                'titleAbbrev' => 'Art Basel Showcase',
+                'subtitle' => 'Led by Danny Glass',
+                'largeImage' => 'images/events/large/danny-glass.jpg',
+                'smallImage' => 'images/events/small/danny-glass.jpg',
+            )),
+            new ClubEvent(array(
+                'title' => 'Dinner with Brown Advancement',
+                'titleAbbrev' => 'Dinner w/ Brown',
+                'subtitle' => 'and their Advancement Office',
+                'largeImage' => 'images/events/large/dinner-advancement.jpg',
+                'smallImage' => 'images/events/small/dinner-advancement.jpg',
+            )),
+//            new ClubEvent(array(
+//                'title' => '',
+//                'titleAbbrev' => '',
+//                'subtitle' => '',
+//                'largeImage' => '',
+//                'smallImage' => '',
+//            )),
+        );
+    }
+}

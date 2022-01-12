@@ -89,7 +89,7 @@ include_once 'data.php'
 
                 <!-- slide 1 -->
                 <li>
-                    <div class="fleximg zoomInOut" style="background-image: url(images/slider/brown-table.jpg)">
+                    <div class="fleximg zoomInOut" style="background-image: url(images/slider/catamaran.jpg)">
                         <div class="color-overlay black"></div>
                     </div>
                     <div class="flex-caption banner-caption">
@@ -97,7 +97,7 @@ include_once 'data.php'
                             <div class="inner-wrap">
                                 <h1 class="brand-heading light large ani ani_bottom d6">Uniting South Florida Brown Alumni</h1>
                                 <div class="ani ani_bottom d9">
-                                    <a href="https://www.facebook.com/groups/BrownClubMiami/" class="btn btn-default white btn-md outline  text-uppercase">Join the Facebook Group</a>
+                                    <a href="https://www.facebook.com/groups/BrownClubMiami/" class="btn btn-default white btn-md outline text-uppercase">Join the Facebook Group</a>
                                 </div>
                             </div>
                         </div>
@@ -169,20 +169,17 @@ include_once 'data.php'
     <aside class="common-box count-block text-center parallax" data-parallax="scroll" data-image-src="images/mercedes-counts.jpg">
         <span class="color-overlay"></span>
         <ul class="row">
-            <li class="col-lg-3 col-sm-6">
-                <div class="holder">
-                    <i class="fa fa-facebook"></i><span class="counter">175</span> <span class="text">Facebook Friends</span>
-                </div>
-            </li>
-            <li class="col-lg-3 col-sm-6">
-                <div class="holder"><i class="fa fa-envelope-o"></i> <span class="counter">459</span> <span class="text">In Mailing List</span> </div>
-            </li>
-            <li class="col-lg-3 col-sm-6">
-                <div class="holder"><i class="fa fa-instagram"></i><span class="counter">105</span> <span class="text">Instagram Followers</span> </div>
-            </li>
-            <li class="col-lg-3 col-sm-6">
-                <div class="holder"><i class="ti-face-smile"></i> <span class="counter">14493</span> <span class="text">Smiles Created</span> </div>
-            </li>
+            <?php
+            $counterItems = CounterItem::getCounters();
+            foreach ($counterItems as $counterItem):?>
+                <li class="col-lg-<?php echo ceil(12 / count($counterItems));?> col-sm-6">
+                    <div class="holder">
+                        <i class="<?php echo $counterItem->iconClass;?>"></i>
+                        <span class="counter"><?php echo $counterItem->value;?></span>
+                        <span class="text"><?php echo $counterItem->label;?></span>
+                    </div>
+                </li>
+            <?php endforeach;?>
         </ul>
     </aside>
 
@@ -196,123 +193,35 @@ include_once 'data.php'
             </div>
 
             <!-- Sorting Navigation -->
-            <!--<nav class="sorting-nav">-->
-            <!--<ul>-->
-            <!--<li class="active" data-filter="all">All Items</li>-->
-            <!--<li data-filter="1">Application</li>-->
-            <!--<li data-filter="2">Graphics</li>-->
-            <!--<li data-filter="3">Media</li>-->
-            <!--</ul>-->
-            <!--</nav>-->
+            <nav class="sorting-nav">
+            <ul>
+            <li class="active" data-filter="all">All Items</li>
+            <li data-filter="1">Application</li>
+            <li data-filter="2">Graphics</li>
+            <li data-filter="3">Media</li>
+            </ul>
+            </nav>
 
         </div>
 
         <div class="work-list color-dark lightbox filtr-container">
+            <?php
+            $events = ClubEvent::getClubEvents();
+            foreach($events as $event):?>
             <div class="filtr-item" data-category="1">
                 <div class="item-wrap">
-                    <a href="images/events/large/2020-students-reception.jpg" class="item" data-title="Welcome Reception to the Class of 2020">
-                        <img src="images/events/small/2020-students-reception.jpg" class="fill" alt="Welcome Reception to the Class of 2020">
+                    <a href="<?php echo $event->largeImage;?>" class="item" data-title="<?php echo $event->title;?>">
+                        <img src="<?php echo $event->smallImage;?>" class="fill" alt="<?php echo $event->title;?>">
                         <div class="caption">
                             <div class="inner-caption">
-                                <h4>Class of 2020 Party</h4>
-                                <p>Hosted by Laurie Stein '90</p>
+                                <h4><?php echo $event->titleAbbrev;?></h4>
+                                <p><?php echo $event->subtitle;?></p>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="filtr-item" data-category="1">
-                <div class="item-wrap">
-                    <a href="images/events/large/breaking-careers.jpg" class="item" data-title="Breaking Through Careers at Miami Country Day School">
-                        <img src="images/events/small/breaking-careers.jpg" class="fill" alt="Breaking Through Careers">
-                        <div class="caption">
-                            <div class="inner-caption">
-                                <h4>Career Day</h4>
-                                <p>Introducing careers to kids</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="filtr-item" data-category="1">
-                <div class="item-wrap">
-                    <a href="images/events/large/salsa-bulac.jpg" class="item" data-title="Salsa Night with BULAC at the Yuca Cuban Restaurant">
-                        <img src="images/events/small/salsa-bulac.jpg" class="fill" alt="Salsa Night with BULAC at the Yuca Cuban Restaurant">
-                        <div class="caption">
-                            <div class="inner-caption">
-                                <h4>Salsa Workshop</h4>
-                                <p>With the help of BULAC</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="filtr-item" data-category="1">
-                <div class="item-wrap">
-                    <a href="images/events/large/wynwood-yard.jpg" class="item" data-title="All Ivy+ Happy Hour at the Wynwood Yard">
-                        <img src="images/events/small/wynwood-yard.jpg" class="fill" alt="All Ivy+ Happy Hour at the Wynwood Yard">
-                        <div class="caption">
-                            <div class="inner-caption">
-                                <h4>Happy Hour</h4>
-                                <p>At the lovely Wynwood Yard</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="filtr-item" data-category="1">
-                <div class="item-wrap">
-                    <a href="images/events/large/haiti-culture-dance.jpg" class="item" data-title="African Dance Class at the Little Haiti Cultural Center">
-                        <img src="images/events/small/haiti-culture-dance.jpg" class="fill" alt="African Dance Class at the Little Haiti Cultural Center">
-                        <div class="caption">
-                            <div class="inner-caption">
-                                <h4>African Dance Class</h4>
-                                <p>Little Haiti Cultural Center</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="filtr-item" data-category="1">
-                <div class="item-wrap">
-                    <a href="images/events/large/ugly-sweater.jpg" class="item" data-title="Ugly Sweater Party">
-                        <img src="images/events/small/ugly-sweater.jpg" class="fill" alt="Ugly Sweater Party">
-                        <div class="caption">
-                            <div class="inner-caption">
-                                <h4>Ugly Sweater Party</h4>
-                                <p>Our popular All Ivy+ Event</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="filtr-item" data-category="1">
-                <div class="item-wrap">
-                    <a href="images/events/large/danny-glass.jpg" class="item" data-title="Danny Glass showcases his artwork at Art Basel">
-                        <img src="images/events/small/danny-glass.jpg" class="fill" alt="Danny Glass showcases his artwork at Art Basel">
-                        <div class="caption">
-                            <div class="inner-caption">
-                                <h4>Art Basel Showcase</h4>
-                                <p>Led by Danny Glass</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="filtr-item" data-category="1">
-                <div class="item-wrap">
-                    <a href="images/events/large/dinner-advancement.jpg" class="item" data-title="Dinner with Brown Advancement">
-                        <img src="images/events/small/dinner-advancement.jpg" class="fill" alt="Dinner with Brown Advancement">
-                        <div class="caption">
-                            <div class="inner-caption">
-                                <h4>Dinner w/ Brown</h4>
-                                <p>and their Advancement Office</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+            <?php endforeach;?>
     </section>
 
     <!-- Quick Contact Banner -->
@@ -629,8 +538,14 @@ include_once 'data.php'
                         </li>
                         <li>
                             <div class="inner-wrap">
+                                <h4>Join Our Linkedin Group</h4>
+                                <a href="https://instagram.com/brownclubofmiami"><i class="fa fa-linkedin"></i>To network with local alumni</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inner-wrap">
                                 <h4>Visit Brunonia</h4>
-                                <a href="https://instagram.com/brownclubofmiami"><i class="fa fa-globe"></i>To see the latest news & events from Brown</a>
+                                <a href="https://www.linkedin.com/groups/12269032/"><i class="fa fa-globe"></i>To see the latest news & events from Brown</a>
                             </div>
                         </li>
                     </ul>
